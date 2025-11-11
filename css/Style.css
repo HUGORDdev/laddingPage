@@ -1,0 +1,91 @@
+/* global elements */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* navigation section */
+.container {
+    margin: 10px 40px;
+    height: 100vh;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* gap:10px; */
+}
+
+.log_title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.nav-plis {
+    display: flex;
+    gap: 10px;
+
+}
+
+li {
+    font-weight: 600;
+}
+
+/* first section */
+.Learn_more {
+    background-color: green;
+    border-radius: 30px;
+    padding: 15px 20px;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+}
+
+.BigTitle {
+    font-size: 164px;
+    display: flex;
+    justify-content: center;
+}
+.BigTitleImage{
+    overflow: hidden;
+    /* background-color: #8E9C78; */
+    /* height: 500px; */
+    display: flex;
+    flex-direction: column;
+    /* border-bottom-left-radius: 40px; */
+    /* border-bottom-right-radius: 40px; */
+}
+
+/* conteneur : laisse l'image dépasser */
+.BigColor1{
+    height: 300px;
+    background-color:#8E9C78;  
+    /* border-radius: 40px; */
+    z-index: 1;
+}
+.BigColor{
+    height: 300px;
+    background-color:#fff;  
+    /* border-radius: 40px; */
+      z-index: 1;
+}
+
+/* image : déborde vers le haut */
+.ipad {
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    width: 900px;
+    height: 600px;
+}
