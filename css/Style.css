@@ -57,6 +57,9 @@
   letter-spacing: -1%;
   font-size: 12px;
 }
+.ParagraphColor{
+    color: #6F6F6F;
+}
 /* style  */
 .flex{
     display: flex;
@@ -79,7 +82,9 @@ a {
     color: black;
 }
 
+/* *************** */
 /* navigation section */
+
 .container {
     margin: 10px 40px;
     height: 100vh;
@@ -88,24 +93,27 @@ a {
 .navigation {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
+    padding-top:  10px;
+    height: 10%;
     /* gap:10px; */
 }
-
-.log_title {
-    font-size: 50px;
-    font-weight: bold;
+.log_title{
+    font-family: 'DM Sans','serif';
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: -5%;
 }
+
 
 .nav-plis {
     display: flex;
     gap: 10px;
-
+    align-items: center;
 }
 
-li {
-    font-weight: 600;
-}
+
 
 /* first section */
 
@@ -115,11 +123,9 @@ li {
     padding: 15px 20px;
     color: #fff;
     border: none;
-    font-size: 18px;
 }
 
 .BigTitle {
-    font-size: 164px;
     display: flex;
     justify-content: center;
 }
@@ -172,7 +178,6 @@ li {
 
 .Trusted {
     color: #6F6F6F;
-    font-size: 15px;
 }
 
 .logolist {
@@ -202,16 +207,14 @@ li {
 }
 .Benefits{
     color: #485C11;
-    font-size: 17px;
 }
 .info{
     display: flex;
     /* flex-direction: row; */
     justify-content: space-between;
 }
-.cracked {
-    font-size: 54px;
-}
+/* .cracked {
+} */
 .cordon{
     height: 20px;
     width: 20px;
@@ -221,6 +224,12 @@ li {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    width: 33%;
-    /* align-items: flex-start; */
+    width: 250px;
+    border-style: solid  ;
+    border-width: 1px 0px 0 0;
+    border-top-color: #6F6F6F;
+    padding-top: 10px;
+}
+.Pa{
+    text-align: justify;
 }
