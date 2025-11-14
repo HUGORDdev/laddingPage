@@ -2,66 +2,103 @@
 /* global value*/
 /*font style  */
 .Display_Static {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: -4%;
-  font-size: 80px;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -4%;
+    font-size: 80px;
 }
-.Display{
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  line-height: 90%;
-  letter-spacing: -4.25%;
-  font-size: 160px;
+
+.Display {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    line-height: 90%;
+    letter-spacing: -4.25%;
+    font-size: 160px;
 }
-.Heading1{
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  line-height: 90%;
-  letter-spacing: -3%;
-  font-size: 60px;
+
+.Heading1 {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    line-height: 90%;
+    letter-spacing: -3%;
+    font-size: 60px;
 }
+
 .Heading2 {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: -4%;
-  font-size: 40px;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -4%;
+    font-size: 40px;
 }
+
 .Heading3 {
-  font-family: "Crimson Text", serif;
-  font-weight: 400;
-  line-height: 100%;
-  letter-spacing: -3%;
-  font-size: 18px;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -3%;
+    font-size: 18px;
 }
+
 .Paragraph {
-  font-family: "DM Sans", serif;
-  font-weight: 400;
-  line-height: 140%;
-  letter-spacing: -3%;
-  font-size: 15px;
+    font-family: "DM Sans", serif;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -3%;
+    font-size: 15px;
 }
+
 .link {
-  font-family: "DM Sans", serif;
-  font-weight: bold;
-  line-height: 140%;
-  letter-spacing: -2.5%;
-  font-size: 15px;
+    font-family: "DM Sans", serif;
+    font-weight: bold;
+    line-height: 140%;
+    letter-spacing: -2.5%;
+    font-size: 15px;
+}
+
+.DmSansMedium {
+    font-family: "DM Sans", serif;
+    font-weight: medium;
+    line-height: 120%;
+    letter-spacing: -8%;
+    font-size: 25.71px;
+}
+
+.RethinkSansMedium {
+    font-family: "Rethink Sans", serif;
+    font-weight: medium;
+    line-height: 120%;
+    letter-spacing: -8%;
+    font-size: 22.86px;
+}
+
+.RedditMonoSansMedium {
+    font-family: "Rethink  Sans", serif;
+    font-weight: medium;
+    line-height: 120%;
+    letter-spacing: -8%;
+    font-size: 21.65px;
+}
+
+.Captions_color {
+    color: #485C11;
+
 }
 .Captions {
-  font-family: "Roboto Mono", serif;
-  font-weight: 400;
-  line-height: 140%;
-  letter-spacing: -1%;
-  font-size: 12px;
+    font-family: "Roboto Mono", serif;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -1%;
+    font-size: 12px;
 }
-.ParagraphColor{
+
+.ParagraphColor {
     color: #6F6F6F;
 }
+
 /* style  */
-.flex{
+.flex_column {
     display: flex;
     flex-direction: column;
 }
@@ -70,6 +107,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
 
 }
 
@@ -82,6 +124,38 @@ a {
     color: black;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.border_top {
+    border-style: solid;
+    border-width: 1px 0px 0 0;
+    border-top-color: #E9E9E9;
+    padding-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 22px;
+    background-color: #DFECC6;
+    color: #000;
+    text-decoration: none;
+    border-radius: 23px;
+    font-weight: 600;
+
+}
+
+.btn_color {
+    background-color: #485C11;
+    color: #fff;
+}
+
+.border_top{
+    border-width: 1px 0 0 0 ;
+    border-style: solid;
+    border-color: #E9E9E9;
+}
 /* *************** */
 /* navigation section */
 
@@ -94,12 +168,13 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top:  10px;
+    padding-top: 10px;
     height: 10%;
     /* gap:10px; */
 }
-.log_title{
-    font-family: 'DM Sans','serif';
+
+.log_title {
+    font-family: 'DM Sans', 'serif';
     font-weight: 600;
     font-size: 30px;
     line-height: 120%;
@@ -116,14 +191,14 @@ a {
 
 
 /* first section */
-
+/* 
 .Learn_more {
     background-color: green;
     border-radius: 30px;
     padding: 15px 20px;
     color: #fff;
     border: none;
-}
+} */
 
 .BigTitle {
     display: flex;
@@ -160,11 +235,10 @@ a {
 
 /* second section */
 .secondSection {
-    margin-top: 30px;
+    margin: 40px 0;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    height: 50%;
 }
 
 /* firstPart */
@@ -174,6 +248,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* padding: 40px 0 ; */
 }
 
 .Trusted {
@@ -197,6 +272,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    padding: 50px 0;
 
 }
 
@@ -205,31 +281,128 @@ a {
     flex-direction: column;
     gap: 50px;
 }
-.Benefits{
+
+.Benefits {
     color: #485C11;
 }
-.info{
+
+.info {
     display: flex;
     /* flex-direction: row; */
     justify-content: space-between;
 }
+
 /* .cracked {
 } */
-.cordon{
+.cordon {
     height: 20px;
     width: 20px;
     object-fit: contain;
 }
-.info > *{
+
+.info>* {
     display: flex;
     flex-direction: column;
     gap: 24px;
     width: 250px;
-    border-style: solid  ;
-    border-width: 1px 0px 0 0;
-    border-top-color: #6F6F6F;
-    padding-top: 10px;
+
 }
-.Pa{
+
+
+.Pa {
     text-align: justify;
 }
+
+/* big pictures */
+.BigPictures {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    padding-bottom: 120px;
+}
+
+.BigPictures_Text {
+    flex: 1;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    gap: 40px;
+}
+
+.BigPictures_Text_element {
+    gap: 30px;
+    padding: 20px 0.80px;
+}
+
+.BigPictures_images {
+    flex: 1;
+    display: flex;
+}
+
+/* why section */
+.why {
+    gap: 20px;
+    padding-bottom: 120px;
+}
+
+.whyParagraph {
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.whyItems {
+    justify-content: space-between;
+}
+
+.Item {
+    gap: 40px;
+    flex: 1
+}
+
+.headerItem {
+    padding: 30px 40px;
+    border-width: 0 0 2px 0;
+    border-color: #929292;
+    border-style: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 20%;
+}
+
+.itemSelected {
+    border: 1px solid #E9E9E9;
+    border-radius: 30px;
+}
+
+.itemElements {
+    padding: 30px 32px;
+    gap: 8px;
+    border-width: 1px 0 0 0;
+}
+/* citation */
+.citation{
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 120px;
+}
+.citation >*{
+    flex: 1;
+    /* display: flex; */
+}
+.citation > :first-child{
+    border-radius: 40px;
+    /* display: flex; */
+}
+.textCitation{
+    /* align-items: center; */
+    justify-content: center;
+    gap:50px
+}
+.authorcitation{}
