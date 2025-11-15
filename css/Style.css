@@ -9,6 +9,10 @@
     font-size: 80px;
 }
 
+.Display_color {
+    color: #929292;
+}
+
 .Display {
     font-family: "Crimson Text", serif;
     font-weight: 400;
@@ -85,6 +89,7 @@
     color: #485C11;
 
 }
+
 .Captions {
     font-family: "Roboto Mono", serif;
     font-weight: 400;
@@ -143,6 +148,7 @@ a {
     text-decoration: none;
     border-radius: 23px;
     font-weight: 600;
+    align-items: center;
 
 }
 
@@ -151,11 +157,12 @@ a {
     color: #fff;
 }
 
-.border_top{
-    border-width: 1px 0 0 0 ;
+.border_top {
+    border-width: 1px 0 0 0;
     border-style: solid;
     border-color: #E9E9E9;
 }
+
 /* *************** */
 /* navigation section */
 
@@ -385,23 +392,59 @@ a {
     gap: 8px;
     border-width: 1px 0 0 0;
 }
+
 /* citation */
-.citation{
+.citation {
     width: 100%;
     justify-content: space-between;
     gap: 20px;
     padding-bottom: 120px;
 }
-.citation >*{
+
+.citation>* {
     flex: 1;
     /* display: flex; */
 }
-.citation > :first-child{
+
+.citation> :first-child {
     border-radius: 40px;
     /* display: flex; */
 }
-.textCitation{
+
+.textCitation {
     /* align-items: center; */
     justify-content: center;
-    gap:50px
+    gap: 50px
+}
+
+/* section How to  */
+.How-to {
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.Map_your_Success {
+    gap: 80px;
+}
+
+.Map_elements {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    gap:60px
+}
+
+/* section Contact */
+.Contact{
+    justify-content: center;
+    align-items: center;
+    gap:40px;
+    /* padding-top: 120px; */
+    padding-bottom: 120px;
+}
+/* footer */
+footer{
+    padding-top:40px ;
+    padding-bottom: 20px;
+    gap: 80px;
 }
