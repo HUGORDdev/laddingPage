@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -28,30 +31,48 @@
     <div class="container">
         <div class="navigation">
             <p class="log_title">Area</p>
+            <!-- Mobile hamburger button -->
+            <button class="burger" aria-label="Menu" aria-controls="main-nav" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="list">
-                <ul class="nav-plis">
+                <ul id="main-nav" class="nav-plis" aria-hidden="true">
                     <li class="link">
-                        <a href="">
+                        <a href="#benefits">
                             Benefits
                         </a>
                     </li>
                     <li class="link">
-                        <a href="">Specifications</a>
+                        <a href="#specs">Specifications</a>
                     </li>
                     <li class="link">
-                        <a href="">
+                        <a href="#howto">
                             How-to
                         </a>
                     </li>
                     <li class="link">
-                        <a href="">
+                        <a href="#contact">
                             Contact Us
+                        </a>
+                    </li>
+                    <li class="link" >
+                        <a href="#contact" class="btn btn_color ">
+                            Learn More
+                            <i class="ph ph-arrow-up-right"></i>
                         </a>
                     </li>
 
                 </ul>
             </nav>
-            <a href="#" class="link btn btn_color"> Learn More</a>
+            <a href="#" class="link btn btn_color">
+                Learn More
+
+                <i class="ph ph-arrow-up-right"></i>
+
+            </a>
+
 
         </div>
         <section class="First_section">
@@ -63,7 +84,7 @@
                 <img src="./image/Ipad.png" class="ipad" />
             </div>
             </sectiond>
-            <section class="secondSection">
+            <section id="benefits" class="secondSection">
                 <div class="FirstPart">
                     <p class="Trusted link">
                         Trusted by:
@@ -178,7 +199,7 @@
                     <img src="./image/row.png" style="width: 100%; border-radius: 20px;" />
                 </div>
             </section>
-            <section class="why border_top flex_column">
+            <section id="specs" class="why border_top flex_column">
                 <div class="whyParagraph flex_column">
                     <p class="Captions" style="color: #485C11;"> Specs</p>
                     <p class="Heading1">Why Choose Area?</p>
@@ -316,7 +337,7 @@
             </div>
 
 
-            <div class="How-to border_top">
+            <div id="howto" class="How-to border_top">
                 <div class="Map_your_Success flex_column">
                     <div class="row" style="justify-content: space-between;">
                         <p class="Heading1"> Map Your Success</p>
@@ -370,19 +391,18 @@
 
             </div>
             <img src="./image/HeroImage.png" width="100%" style="padding-bottom: 40px;">
-            <div class="Contact flex_column">
+            <div id="contact" class="Contact flex_column">
                 <div class="flex_column Contact" style="gap: 40px;">
                     <p class="Heading1">
                         Connect with us
                     </p>
-                    <p class="Paragraph ParagraphColor">
+                    <p class="Paragraph ParagraphColor" style="text-align: center;">
                         Schedule a quick call to learn how Area can turn your regional data into a powerful advantage.
                     </p>
                     <a href="#" class="link btn btn_color" style="width: 100%; text-align: center;">
-                        <p> 
                         Learn more
-                        </p>
-                        <img src="./image/Arrow.png" alt="">
+                        <i class="ph ph-arrow-up-right Icon"></i>
+
                     </a>
                 </div>
 
@@ -420,6 +440,8 @@
                 </div>
             </footer>
     </div>
+
+    <script src="./Js/Index.js" defer></script>
 
     <!-- </div> -->
 

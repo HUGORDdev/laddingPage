@@ -51,6 +51,7 @@
     line-height: 140%;
     letter-spacing: -3%;
     font-size: 15px;
+    text-align: justify;
 }
 
 .link {
@@ -171,13 +172,18 @@ a {
     height: 100vh;
 }
 
+:root {
+    --nav-height: 68px;
+    /* hauteur de la barre de navigation */
+}
+
 .navigation {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 10px;
-    height: 10%;
-    /* gap:10px; */
+    align-items: center;
+    padding: 10px 0;
+    height: var(--nav-height);
+    gap: 12px;
 }
 
 .log_title {
@@ -193,6 +199,23 @@ a {
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+/* Desktop: sticky navigation with slight transparent background */
+@media (min-width: 769px) {
+    .nav-plis {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.b2);
+        backdrop-filter: blur(4px);
+        /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06); */
+    }
+    .nav-plis > :last-child{
+        display: none;
+    } 
 }
 
 
@@ -431,20 +454,164 @@ a {
     padding-top: 60px;
     padding-bottom: 20px;
     padding-right: 30px;
-    gap:60px
+    gap: 60px
 }
 
 /* section Contact */
-.Contact{
+.Contact {
     justify-content: center;
     align-items: center;
-    gap:40px;
+    gap: 40px;
     /* padding-top: 120px; */
     padding-bottom: 120px;
 }
+
 /* footer */
-footer{
-    padding-top:40px ;
+footer {
+    padding-top: 40px;
     padding-bottom: 20px;
     gap: 80px;
+}
+
+/* Smooth scrolling for in-page links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* prevent background scroll when mobile nav is open */
+body.nav-open {
+    overflow: hidden;
+}
+
+/* --- Burger menu (mobile) --- */
+.burger {
+    display: none;
+    width: 36px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    background: #000;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger.open span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* mobile nav: position off-canvas then slide in */
+.nav-plis {
+    transition: right 0.35s cubic-bezier(.2, .9, .2, 1), opacity 0.35s ease;
+}
+
+/* Mobile specific layout */
+@media (max-width: 768px) {
+    .nav-plis {
+        position: fixed;
+        top: var(--nav-height);
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: #fff;
+        z-index: 1200;
+        padding-top: 80px;
+        flex-direction: column;
+        gap: 18px;
+        padding-left: 24px;
+        box-shadow: -12px 0 30px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Make navigation bar fixed at top on mobile so user sees it always */
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1300;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+        height: var(--nav-height);
+        padding-inline: 16px;
+        /* justify-content: space-between; */
+        /* flex-direction:; */
+        /* display: flex; */
+    }
+     .navigation > :last-child{
+        display: none;
+    } 
+    /* push page content under the fixed nav */
+    body {
+        padding-top: var(--nav-height);
+    }
+
+    /* when navigation container has open class, slide nav in */
+    .navigation.open .nav-plis {
+        right: 0;
+    }
+
+    /* Link animations: initially hidden then slide in */
+    .nav-plis li a {
+        opacity: 0;
+        transform: translateX(20px);
+        transition: transform 0.35s ease, opacity 0.35s ease;
+        padding: 12px 6px;
+        display: inline-block;
+    }
+
+    .navigation.open .nav-plis li a {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Staggered delays */
+    .navigation.open .nav-plis li:nth-child(1) a {
+        transition-delay: 0.05s;
+    }
+
+    .navigation.open .nav-plis li:nth-child(2) a {
+        transition-delay: 0.12s;
+    }
+
+    .navigation.open .nav-plis li:nth-child(3) a {
+        transition-delay: 0.18s;
+    }
+
+    .navigation.open .nav-plis li:nth-child(4) a {
+        transition-delay: 0.24s;
+    }
+
+    /* show burger on mobile and hide regular horizontal nav spacing if needed */
+    .burger {
+        display: flex;
+    }
+
+    .nav-plis {
+        gap: 0;
+    }
+
+    .nav-plis li {
+        margin-bottom: 6px;
+    }
+
+    /* make container take normal height on mobile */
+    .container {
+        margin: 10px 20px;
+    }
 }
